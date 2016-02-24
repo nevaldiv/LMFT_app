@@ -1,4 +1,4 @@
-Project 2 - LMFT_APP!
+#Project 2 - LMFT_APP!
 
 **L**ike a **M**arketplace for **F**ile **T**ransfer, **a** **P**rototype for **P**roject2
 
