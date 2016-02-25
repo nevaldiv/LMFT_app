@@ -4,4 +4,9 @@ Rails.application.routes.draw do
   resources :postings do
     resources :post_comments, module: :postings
   end
+
+  root to: "postings#index"
+
 end
+
+

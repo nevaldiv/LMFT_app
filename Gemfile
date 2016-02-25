@@ -26,8 +26,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
-# gem 'bootstrap-sass'
-# gem 'bootsrap-form'
+# Use Rails Html Sanitizer for HTML sanitization
+gem 'rails-html-sanitizer', '~> 1.0'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -36,23 +36,22 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  # Call 'debugger' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-end
 
-group :development do
-  # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
+  # Access an IRB console on exceptions page and /console in development
+  gem 'web-console', '~> 2.0.0.beta2'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+end
 
+gem "devise"
+gem 'bootstrap-sass', '~> 3.2.0.2'
+
+group :development do
   gem "annotate"
   gem "better_errors"
   gem "binding_of_caller"
 end
-
-gem 'devise', '~> 3.5', '>= 3.5.6'
-
-
 
