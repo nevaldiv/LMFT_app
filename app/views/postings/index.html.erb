@@ -1,1 +1,8 @@
-index.html.erb
+<div class="container">
+  <div class="pull-right">
+    <%= link_to "Create new Listing!", new_posting_path, class: "btn btn-success" %>
+  </div>
+
+  <h1 class="page-header">Listings!</h1>
+  <%= render @postings %>
+</div>
