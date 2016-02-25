@@ -30,4 +30,8 @@ class User < ActiveRecord::Base
 
   has_many :postings
   has_many :post_comments
+
+  def name
+   "#{first_name} #{last_name}"
+  end
 end

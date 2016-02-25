@@ -13,12 +13,13 @@ class PostingsController < ApplicationController
 
   def new
     @posting = Posting.new
-    @posting.post_comments.new
+    # @posting.post_comments.new
+    # @posting.post_comments.save
   end
 
   def create
     @posting = current_user.postings.new posting_params
-    @posting.forum_posts.first.user_id = current_user.id
+    @posting.post_comments.first.user_id = current_user.id
 
     if @posting.save
       redirect_to @posting
@@ -34,6 +35,6 @@ private
     end
 
     def posting_params
-      params.require(:posting).permit(:subject, post_comments_attributes: [:body])
+      params.require(:posting).permit(:title, post_comments_attributes: [:body])
     end
 end

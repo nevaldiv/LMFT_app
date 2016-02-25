@@ -14,4 +14,5 @@
 class PostComment < ActiveRecord::Base
   belongs_to :postings
   belongs_to :user
+  validates :body, presence: true
 end

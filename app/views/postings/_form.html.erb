@@ -1,6 +1,6 @@
-<%= form_for @postings do |f| %>
+<%= form_for @posting do |f| %>
   <div class="form-group">
-    <%= f.text_field :subject, placeholder: "Test Subject", class: "form-control" %>
+    <%= f.text_field :title, placeholder: "Test Subject", class: "form-control" %>
   </div>
 
   <%= f.fields_for :post_comments do |p| %>
