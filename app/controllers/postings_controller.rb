@@ -8,12 +8,12 @@ class PostingsController < ApplicationController
   end
 
   def show
-
+    @posting = Posting.new
   end
 
   def new
     @posting = Posting.new
-    # @posting.post_comments.new
+    @posting.post_comments.new
     # @posting.post_comments.save
   end
 

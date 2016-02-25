@@ -3,7 +3,7 @@
 # Table name: post_comments
 #
 #  id         :integer          not null, primary key
-#  post_id    :integer
+#  posting_id :integer
 #  user_id    :integer
 #  body       :text
 #  avatar     :string
